@@ -1,0 +1,35 @@
+server:
+  port: 8081
+
+
+spring:
+  # 数据库驱动：
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接地址
+    url: jdbc:mysql://localhost:3306/hospital?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    # 数据库用户名&密码：
+    username: root
+    password: 273213
+    #redis连接
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    timeout: 3S
+
+  #邮箱依赖
+  mail:
+    host: smtp.qq.com
+    username: 2732131458@qq.com #自己的邮箱账号
+    password: luhiogdhlouedddc  #这个不是登录密码而是163授权登录的密码
+    default-encoding: UTF-8
+
+# mybatis扫描文件
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
